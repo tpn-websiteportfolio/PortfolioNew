@@ -8,21 +8,21 @@ export default {
     extend: {
       colors: {
         dark: {
-          900: "#0a0e27",
-          800: "#111633",
-          700: "#1a1f3a",
-          600: "#2d3250",
-          500: "#3d4470",
-          400: "#5a6691",
+          900: "#000000",
+          800: "#0a0a0a",
+          700: "#1a1a1a",
+          600: "#2a2a2a",
+          500: "#3a3a3a",
+          400: "#4a4a4a",
         },
         primary: {
-          500: "#6366f1",
-          600: "#4f46e5",
-          700: "#4338ca",
+          500: "#c0c0c0",
+          600: "#a8a8a8",
+          700: "#909090",
         },
         accent: {
-          500: "#ec4899",
-          600: "#db2777",
+          500: "#e8b547",
+          600: "#d4a046",
         },
       },
       fontFamily: {
@@ -56,14 +56,14 @@ export default {
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-animated": "linear-gradient(45deg, #6366f1, #8b5cf6, #ec4899, #6366f1)",
+        "gradient-animated": "linear-gradient(45deg, #c0c0c0, #e8b547, #c0c0c0, #e8b547)",
       },
       backgroundSize: {
         "gradient-size": "200% 200%",
       },
       boxShadow: {
-        glow: "0 0 20px rgba(99, 102, 241, 0.5)",
-        "glow-lg": "0 0 40px rgba(99, 102, 241, 0.3)",
+        glow: "0 0 20px rgba(192, 192, 192, 0.3)",
+        "glow-lg": "0 0 40px rgba(232, 181, 71, 0.2)",
       },
     },
   },
