@@ -1,31 +1,24 @@
 import clsx, { type ClassValue } from "clsx";
+import * as Icons from "lucide-react";
 
 export function cn(...inputs: ClassValue[]) {
   return clsx(inputs);
 }
 
-export function calculateVAFitScore(answers: Record<string, string>): {
+export function calculateVAFitScore(answers: number[]): {
   score: number;
   level: "low" | "medium" | "high" | "perfect";
   message: string;
   recommendations: string[];
 } {
   let score = 0;
-  const answersObj = Object.values(answers).map((v) => v || "0");
 
-  // Q1: Time on admin tasks
-  const timeScore = parseInt(answersObj[0] || "0", 10);
-  score += Math.min(timeScore / 30, 1) * 25;
-
-  // Q2-Q4: Qualitative answers, add base score
-  score += 25;
-
-  // Add bonus for high tech comfort
-  if (answersObj[2] === "advanced") score += 10;
-
-  // Add bonus for scaling goals
-  if (answersObj[3] === "scaling") score += 10;
-
+  // Sum all answer scores
+  score = answers.reduce((sum, val) => sum + val, 0);
+  
+  // Normalize to 0-100 scale
+  const maxScore = 40 + 40 + 40 + 40; // Max possible score
+  score = Math.round((score / maxScore) * 100);
   score = Math.min(score, 100);
 
   const level: "low" | "medium" | "high" | "perfect" =
@@ -86,4 +79,24 @@ export function formatDate(date: Date): string {
     month: "long",
     day: "numeric",
   }).format(date);
+}
+
+export function mapToolIcon(iconName: string) {
+  const iconMap: Record<string, any> = {
+    Zap: Icons.Zap,
+    Mail: Icons.Mail,
+    FileText: Icons.FileText,
+    Clipboard: Icons.Clipboard,
+    Database: Icons.Database,
+    Users: Icons.Users,
+    Brain: Icons.Brain,
+    Share2: Icons.Share2,
+    Settings: Icons.Settings,
+    CheckCircle: Icons.CheckCircle,
+    Send: Icons.Send,
+    Palette: Icons.Palette,
+    ExternalLink: Icons.ExternalLink,
+  };
+  
+  return iconMap[iconName] || Icons.Settings;
 }

@@ -146,12 +146,48 @@ export const tools: Tool[] = [
   },
 ];
 
-export const toolCategories = [
-  { id: "all", label: "All Tools" },
-  { id: "automation", label: "Automation" },
-  { id: "communication", label: "Communication" },
-  { id: "project", label: "Project Management" },
-  { id: "data", label: "Data & CRM" },
-  { id: "content", label: "Content" },
-  { id: "ai", label: "AI Tools" },
+export interface ToolCategory {
+  id: string;
+  name: string;
+  category: string;
+  tools: Tool[];
+}
+
+export const toolCategories: ToolCategory[] = [
+  {
+    id: "automation",
+    name: "Automation",
+    category: "automation",
+    tools: tools.filter((t) => t.category === "automation"),
+  },
+  {
+    id: "communication",
+    name: "Communication",
+    category: "communication",
+    tools: tools.filter((t) => t.category === "communication"),
+  },
+  {
+    id: "project",
+    name: "Project Management",
+    category: "project",
+    tools: tools.filter((t) => t.category === "project"),
+  },
+  {
+    id: "data",
+    name: "Data & CRM",
+    category: "data",
+    tools: tools.filter((t) => t.category === "data"),
+  },
+  {
+    id: "content",
+    name: "Content",
+    category: "content",
+    tools: tools.filter((t) => t.category === "content"),
+  },
+  {
+    id: "ai",
+    name: "AI Tools",
+    category: "ai",
+    tools: tools.filter((t) => t.category === "ai"),
+  },
 ];
