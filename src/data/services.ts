@@ -92,4 +92,16 @@ export const services: Service[] = [
       "SOP Creation",
     ],
   },
+  {
+    id: "ai-assisted-productivity",
+    title: "AI-Assisted Productivity",
+    description: "Use AI tools to make research, content tasks, and daily workflows easier.",
+    icon: "Sparkles",
+    category: "automation",
+    benefits: [
+      "AI-assisted research",
+      "Content support",
+      "Workflow assistance",
+    ],
+  },
 ];
