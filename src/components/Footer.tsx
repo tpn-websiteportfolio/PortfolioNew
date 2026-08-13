@@ -51,7 +51,7 @@ export function Footer() {
               transition={{ duration: 0.6 }}
               className="md:col-span-1"
             >
-              <h3 className="text-2xl font-bold text-white mb-2">VA Operations</h3>
+              <h3 className="text-2xl font-bold text-white mb-2">My Portfolio</h3>
               <p className="text-gray-400 text-sm">
                 Transforming business chaos into organized workflows through strategic virtual assistance.
               </p>
