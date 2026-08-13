@@ -25,7 +25,7 @@ export const services: Service[] = [
     title: "Lead Generation & Outreach",
     description: "Research leads and support outreach campaigns through organized tracking and follow-ups.",
     icon: "Target",
-    category: "operations",
+    category: "strategy",
     benefits: [
       "Email Outreach",
       "Lead Research",
@@ -85,7 +85,7 @@ export const services: Service[] = [
     title: "SOP & Workflow Management",
     description: "Create clear SOPs and organized workflows to keep daily tasks simple and consistent.",
     icon: "FileText",
-    category: "operations",
+    category: "automation",
     benefits: [
       "Notion and Task Tracking",
       "Workflow organization",
