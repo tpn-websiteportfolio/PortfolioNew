@@ -98,6 +98,7 @@ export function Hero() {
                 style={{
                   filter: "brightness(0.95) contrast(1.05)",
                   boxShadow: "inset -80px 0 120px rgba(0, 0, 0, 0.3)",
+                  objectPosition: "center 35%",
                 }}
               />
               <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-[#0a0a0a]/20" />
