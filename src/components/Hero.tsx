@@ -95,10 +95,6 @@ export function Hero() {
                 src="/ggg.jpg"
                 alt="Stephen Ilustre"
                 className="h-full w-full object-cover"
-                style={{
-                  maskImage: "radial-gradient(ellipse 45% 100% at 50% 100%, black 0%, black 50%, transparent 100%)",
-                  WebkitMaskImage: "radial-gradient(ellipse 45% 100% at 50% 100%, black 0%, black 50%, transparent 100%)",
-                }}
               />
             </motion.div>
           </div>
