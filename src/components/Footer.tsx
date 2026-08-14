@@ -33,7 +33,7 @@ export function Footer() {
     {
       name: "Email",
       icon: Mail,
-      url: "mailto:stephenilustre90@gmail.com",
+      url: "mailto:stephenilustre12@gmail.com",
     },
   ];
 
@@ -103,11 +103,11 @@ export function Footer() {
             >
               <h4 className="mb-4 font-bold text-white">Get In Touch</h4>
               <a
-                href="mailto:stephenilustre90@gmail.com"
+                href="mailto:stephenilustre12@gmail.com"
                 className="mb-6 inline-flex items-center gap-2 font-semibold text-sky-400 transition-colors hover:text-sky-300"
               >
                 <Mail size={20} />
-                stephenilustre90@gmail.com
+                stephenilustre12@gmail.com
               </a>
               <p className="text-sm text-slate-400">Bacolod City, Negros Occidental, Philippines</p>
             </motion.div>

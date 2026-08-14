@@ -49,7 +49,7 @@ export function Hero() {
 
               <div className="mt-10 flex flex-col gap-4 sm:flex-row">
                 <a
-                  href="mailto:stephenilustre90@gmail.com"
+                  href="mailto:stephenilustre12@gmail.com"
                   className="inline-flex items-center justify-center gap-2 rounded-xl bg-sky-500 px-8 py-4 text-lg font-semibold text-white shadow-[0_10px_30px_rgba(14,165,233,0.45)] transition hover:bg-sky-400"
                 >
                   {heroData.cta_primary}
@@ -70,7 +70,7 @@ export function Hero() {
                 <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" className="flex h-12 w-12 items-center justify-center rounded-full border border-sky-500/60 bg-[#0b2237] text-sky-300 transition hover:border-sky-400 hover:text-white">
                   <Globe size={18} />
                 </a>
-                <a href="mailto:stephenilustre90@gmail.com" className="flex h-12 w-12 items-center justify-center rounded-full border border-sky-500/60 bg-[#0b2237] text-sky-300 transition hover:border-sky-400 hover:text-white">
+                <a href="mailto:stephenilustre12@gmail.com" className="flex h-12 w-12 items-center justify-center rounded-full border border-sky-500/60 bg-[#0b2237] text-sky-300 transition hover:border-sky-400 hover:text-white">
                   <Mail size={18} />
                 </a>
               </div>
