@@ -27,12 +27,12 @@ export function Hero() {
     <section id="home" className="relative flex min-h-screen items-center overflow-hidden pt-32 pb-16">
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,_#0a0a0a_0%,_#0d0d0d_30%,_#0a0a0a_100%)]" />
 
-      <div className="container-custom">
+      <div className="container-custom h-full">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="mx-auto max-w-[1080px] rounded-[1.25rem] border border-dark-700 bg-dark-800/50 px-3 py-3 shadow-[0_24px_70px_rgba(0,0,0,0.42)] backdrop-blur-[1px] md:px-5 md:py-4"
+          className="mx-auto max-w-[1080px] h-full rounded-[1.25rem] border border-dark-700 bg-dark-800/50 px-3 py-3 shadow-[0_24px_70px_rgba(0,0,0,0.42)] backdrop-blur-[1px] md:px-5 md:py-4"
         >
           <motion.div
             variants={itemVariants}
@@ -48,8 +48,8 @@ export function Hero() {
             </div>
           </motion.div>
 
-          <div className="grid items-center gap-4 lg:grid-cols-[1.1fr_0.9fr] lg:gap-6">
-            <motion.div variants={itemVariants} className="max-w-2xl px-1 py-2 md:py-5">
+          <div className="grid items-stretch gap-4 lg:grid-cols-[1.1fr_0.9fr] lg:gap-6">
+            <motion.div variants={itemVariants} className="flex flex-col justify-center max-w-2xl px-1 py-2 md:py-5">
               <h1 className="text-5xl font-bold leading-none tracking-tight text-white md:text-7xl">
                 {heroData.headline}
               </h1>
@@ -90,14 +90,12 @@ export function Hero() {
               </div>
             </motion.div>
 
-            <motion.div variants={itemVariants} className="flex justify-center lg:justify-end">
-              <div className="relative flex h-[300px] w-[250px] items-center justify-center overflow-hidden rounded-[2rem] border border-dark-700 bg-dark-800/50 md:h-[360px] md:w-[300px] lg:h-[420px] lg:w-[350px]">
-                <img
-                  src="/stephen.jpg"
-                  alt="Stephen Ilustre"
-                  className="relative z-10 h-full w-full object-cover rounded-[2rem]"
-                />
-              </div>
+            <motion.div variants={itemVariants} className="h-full overflow-hidden">
+              <img
+                src="/stephen.jpg"
+                alt="Stephen Ilustre"
+                className="h-full w-full object-cover"
+              />
             </motion.div>
           </div>
         </motion.div>
