@@ -92,7 +92,7 @@ export function Hero() {
 
             <motion.div variants={itemVariants} className="relative h-full overflow-hidden">
               <img
-                src="/stephen.jpg"
+                src="/ggg.jpg"
                 alt="Stephen Ilustre"
                 className="h-full w-full object-cover"
                 style={{
