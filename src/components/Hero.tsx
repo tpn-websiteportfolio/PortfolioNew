@@ -95,9 +95,9 @@ export function Hero() {
                 <img
                   src="/stephen.jpg"
                   alt="Stephen Ilustre"
-                  className="relative h-full w-full object-cover"
-                  style={{
-                    filter: "brightnesz-10 h-full w-full object-cover rounded-[2rem]"
+                  className="relative z-10 h-full w-full object-cover rounded-[2rem]"
+                />
+              </div>
             </motion.div>
           </div>
         </motion.div>
