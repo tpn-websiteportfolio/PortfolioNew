@@ -3,10 +3,10 @@ import { Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
 
 const navItems = [
+  { label: "Home", href: "#home" },
+  { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
-  { label: "Workflow Proof", href: "#workflow-proof" },
-  { label: "VA Fit Check", href: "#fit-checker" },
-  { label: "Tools", href: "#tools" },
+  { label: "Portfolio", href: "#portfolio" },
   { label: "Contact", href: "#contact" },
 ];
 
@@ -23,68 +23,50 @@ export function Header() {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-dark-900/80 border-b border-dark-700">
-      <nav className="container-custom py-4 flex items-center justify-between">
+    <header className="fixed inset-x-0 top-6 z-50 px-4 sm:px-6 lg:px-10">
+      <nav className="mx-auto flex max-w-6xl items-center justify-between rounded-[2rem] border border-white/10 bg-[#061c2d]/90 px-6 py-4 shadow-[0_25px_80px_rgba(0,0,0,0.45)] backdrop-blur-md">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          className="flex items-center gap-2"
+          className="flex items-center gap-3"
         >
-          <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center font-bold text-white text-lg">
-            VA
-          </div>
-          <span className="font-bold text-lg text-white">Operations</span>
+          <span className="text-3xl font-bold tracking-tight text-white">Stephen</span>
         </motion.div>
 
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden items-center gap-8 md:flex">
           {navItems.map((item) => (
             <button
               key={item.href}
               onClick={() => scrollToSection(item.href)}
-              className="text-gray-300 hover:text-white transition-colors font-medium"
+              className="text-base font-medium text-slate-200 transition-colors hover:text-white"
             >
               {item.label}
             </button>
           ))}
         </div>
 
-        {/* CTA Button */}
-        <motion.button
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          className="hidden md:block px-6 py-2 bg-primary-600 hover:bg-primary-500 text-white rounded-lg font-semibold transition-colors"
-        >
-          Let's Talk
-        </motion.button>
-
-        {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden p-2 text-gray-300 hover:text-white"
+          className="rounded-full border border-white/10 p-2 text-slate-200 transition hover:text-white md:hidden"
         >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
+          {isOpen ? <X size={22} /> : <Menu size={22} />}
         </button>
       </nav>
 
-      {/* Mobile Navigation */}
       <motion.div
         animate={{ height: isOpen ? "auto" : 0 }}
-        className="md:hidden overflow-hidden bg-dark-800 border-t border-dark-700"
+        className="mx-auto mt-2 max-w-6xl overflow-hidden rounded-2xl border border-white/10 bg-[#061c2d]/95 md:hidden"
       >
-        <div className="container-custom py-4 flex flex-col gap-4">
+        <div className="flex flex-col gap-4 px-5 py-4">
           {navItems.map((item) => (
             <button
               key={item.href}
               onClick={() => scrollToSection(item.href)}
-              className="text-gray-300 hover:text-white transition-colors text-left font-medium py-2"
+              className="text-left text-base font-medium text-slate-200 transition-colors hover:text-white"
             >
               {item.label}
             </button>
           ))}
-          <button className="w-full px-4 py-2 bg-primary-600 hover:bg-primary-500 text-white rounded-lg font-semibold transition-colors mt-4">
-            Let's Talk
-          </button>
         </div>
       </motion.div>
     </header>

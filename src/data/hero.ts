@@ -1,7 +1,9 @@
 export const heroData = {
-  headline: "I help business owners turn daily chaos into organized workflows.",
-  subheadline: "As a Virtual Assistant & AI-assisted Operations specialist, I streamline your business processes, automate tasks, and give you back your time.",
-  cta_primary: "Let's Build Your Workflow",
-  cta_secondary: "See What I Can Do",
-  tagline: "Stop doing the work. Start scaling the business.",
+  name: "Stephen Ilustre",
+  headline: "Hi, I'm Stephen Ilustre",
+  role: "Administrative Virtual Assistant | KPI Tracking & Operation Support",
+  subheadline:
+    "Detail-oriented Virtual Assistant with 2+ years of experience in administrative support, social media management, KPI tracking, and team coordination. Proficient in Google Workspace, Calendars, Sheets, Docs and Notion for building SOPs, dashboards, and task trackers. Skilled at streamlining workflows, monitoring performance across multiple accounts, and delivering consistent results in remote, fast-paced environments to help managers and teams scale efficiently.",
+  cta_primary: "Hire Me",
+  cta_secondary: "Let's Talk",
 };
