@@ -3,7 +3,7 @@ export { ScrollProgress } from "./ScrollProgress";
 export { Hero } from "./Hero";
 export { About } from "./About";
 export { Services } from "./Services";
-export { WorkflowProof } from "./WorkflowProof";
+export { WorkExperience } from "./WorkExperience";
 export { VAFitChecker } from "./VAFitChecker";
 export { ToolsGrid } from "./ToolsGrid";
 export { ContactForm } from "./ContactForm";

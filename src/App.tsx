@@ -4,7 +4,7 @@ import {
   Hero,
   About,
   Services,
-  WorkflowProof,
+  WorkExperience,
   VAFitChecker,
   ToolsGrid,
   ContactForm,
@@ -20,7 +20,7 @@ function App() {
       <Hero />
       <About />
       <Services />
-      <WorkflowProof />
+      <WorkExperience />
       <VAFitChecker />
       <ToolsGrid />
       <ContactForm />
