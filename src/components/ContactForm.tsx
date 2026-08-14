@@ -8,8 +8,7 @@ import { Mail, Send } from "lucide-react";
 const contactSchema = z.object({
   fullName: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Invalid email address"),
-  company: z.string().min(2, "Company name must be at least 2 characters"),
-  phone: z.string().optional(),
+  subject: z.string().min(2, "Subject must be at least 2 characters"),
   message: z.string().min(10, "Message must be at least 10 characters"),
 });
 
@@ -44,9 +43,9 @@ export function ContactForm() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Let's Talk</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Let's Work Together</h2>
           <p className="text-xl text-gray-300">
-            Ready to streamline your workflow? Get in touch and let's discuss how I can help
+            Have a task, project, or business support need? Let&apos;s connect and see how I can help.
           </p>
         </motion.div>
 
@@ -63,7 +62,7 @@ export function ContactForm() {
             <input
               {...register("fullName")}
               type="text"
-              placeholder="Your name"
+              placeholder="Stephen Ilustre"
               className="w-full px-4 py-3 rounded-lg bg-dark-700 border border-dark-600 text-white placeholder-gray-500 focus:border-primary-500 focus:outline-none transition-all"
             />
             {errors.fullName && (
@@ -73,39 +72,28 @@ export function ContactForm() {
 
           {/* Email */}
           <div className="mb-6">
-            <label className="block text-white font-semibold mb-2">Email *</label>
+            <label className="block text-white font-semibold mb-2">Email Address *</label>
             <input
               {...register("email")}
               type="email"
-              placeholder="your@email.com"
+              placeholder="stephenilustre12@gmail.com"
               className="w-full px-4 py-3 rounded-lg bg-dark-700 border border-dark-600 text-white placeholder-gray-500 focus:border-primary-500 focus:outline-none transition-all"
             />
             {errors.email && <p className="text-red-400 text-sm mt-1">{errors.email.message}</p>}
           </div>
 
-          {/* Company */}
+          {/* Subject */}
           <div className="mb-6">
-            <label className="block text-white font-semibold mb-2">Company *</label>
+            <label className="block text-white font-semibold mb-2">Subject *</label>
             <input
-              {...register("company")}
+              {...register("subject")}
               type="text"
-              placeholder="Your company name"
+              placeholder="How can I help you?"
               className="w-full px-4 py-3 rounded-lg bg-dark-700 border border-dark-600 text-white placeholder-gray-500 focus:border-primary-500 focus:outline-none transition-all"
             />
-            {errors.company && (
-              <p className="text-red-400 text-sm mt-1">{errors.company.message}</p>
+            {errors.subject && (
+              <p className="text-red-400 text-sm mt-1">{errors.subject.message}</p>
             )}
-          </div>
-
-          {/* Phone */}
-          <div className="mb-6">
-            <label className="block text-white font-semibold mb-2">Phone (Optional)</label>
-            <input
-              {...register("phone")}
-              type="tel"
-              placeholder="Your phone number"
-              className="w-full px-4 py-3 rounded-lg bg-dark-700 border border-dark-600 text-white placeholder-gray-500 focus:border-primary-500 focus:outline-none transition-all"
-            />
           </div>
 
           {/* Message */}
@@ -113,7 +101,7 @@ export function ContactForm() {
             <label className="block text-white font-semibold mb-2">Message *</label>
             <textarea
               {...register("message")}
-              placeholder="Tell me about your project and goals..."
+              placeholder="Tell me about your project, task, or support needs."
               rows={5}
               className="w-full px-4 py-3 rounded-lg bg-dark-700 border border-dark-600 text-white placeholder-gray-500 focus:border-primary-500 focus:outline-none transition-all resize-none"
             />
@@ -162,11 +150,7 @@ export function ContactForm() {
 
         {/* Info Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {[
-            { title: "Response Time", value: "24 Hours" },
-            { title: "Consultation", value: "Free" },
-            { title: "Timezone", value: "Flexible" },
-          ].map((item, index) => (
+          {["Responsive", "Professional", "Flexible"].map((item, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
@@ -174,8 +158,7 @@ export function ContactForm() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="bg-dark-800 rounded-lg p-6 border border-dark-700 text-center"
             >
-              <p className="text-gray-400 text-sm mb-2">{item.title}</p>
-              <p className="text-white text-2xl font-bold">{item.value}</p>
+              <p className="text-white text-xl font-bold">{item}</p>
             </motion.div>
           ))}
         </div>
@@ -189,12 +172,20 @@ export function ContactForm() {
         >
           <p className="text-gray-400 mb-4">Prefer direct contact?</p>
           <a
-            href="mailto:hello@vaoperations.com"
+            href="mailto:stephenilustre12@gmail.com"
             className="inline-flex items-center gap-2 text-primary-400 hover:text-primary-300 font-semibold text-lg transition-colors"
           >
             <Mail size={24} />
-            hello@vaoperations.com
+            stephenilustre12@gmail.com
           </a>
+          <p className="mt-5 text-sm leading-relaxed text-gray-400">
+            Supporting remote work across administrative support, outreach, lead generation, email and communication, research, data management, and general virtual assistance.
+          </p>
+          <div className="mt-5 flex flex-col items-center justify-center gap-2 text-sm text-slate-300 sm:flex-row sm:gap-5">
+            <span>Based in: Philippines</span>
+            <span className="hidden text-slate-600 sm:inline">•</span>
+            <span>Available for: Remote Work</span>
+          </div>
         </motion.div>
       </div>
     </section>
