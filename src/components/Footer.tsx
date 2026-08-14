@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ExternalLink, Facebook, Linkedin, Mail } from "lucide-react";
+import { ExternalLink, Share2, Linkedin, Mail } from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -22,7 +22,7 @@ export function Footer() {
   const socialLinks = [
     {
       name: "Facebook",
-      icon: Facebook,
+      icon: Share2,
       url: "https://www.facebook.com",
     },
     {
