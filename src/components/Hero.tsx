@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Share2, Globe, Mail } from "lucide-react";
+import heroPortrait from "../assets/stephen.jpg";
 import { heroData } from "../data/hero";
 
 export function Hero() {
@@ -25,18 +26,18 @@ export function Hero() {
 
   return (
     <section id="home" className="relative flex min-h-screen items-center overflow-hidden pt-32 pb-16">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_left,_rgba(52,126,181,0.18),_transparent_35%),radial-gradient(circle_at_bottom_right,_rgba(88,178,255,0.14),_transparent_25%),linear-gradient(90deg,_#031926_0%,_#031d2b_30%,_#061c2d_100%)]" />
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,_#0a0a0a_0%,_#0d0d0d_30%,_#0a0a0a_100%)]" />
 
       <div className="container-custom">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="mx-auto max-w-[1280px] rounded-[2rem] border border-white/10 bg-[#021b2a]/90 px-6 py-6 shadow-[0_30px_80px_rgba(0,0,0,0.45)] md:px-10 md:py-10"
+          className="mx-auto max-w-[1080px] rounded-[1.25rem] border border-black/60 bg-[#0a0a0a]/80 px-3 py-3 shadow-[0_24px_70px_rgba(0,0,0,0.42)] backdrop-blur-[1px] md:px-5 md:py-4"
         >
           <motion.div
             variants={itemVariants}
-            className="mb-10 flex items-center justify-between text-white"
+            className="mb-6 flex items-center justify-between text-white md:mb-8"
           >
             <div className="text-3xl font-bold tracking-tight">{heroData.name}</div>
             <div className="hidden items-center gap-8 md:flex">
@@ -48,8 +49,8 @@ export function Hero() {
             </div>
           </motion.div>
 
-          <div className="grid items-center gap-10 lg:grid-cols-[1.1fr_0.9fr]">
-            <motion.div variants={itemVariants} className="max-w-2xl px-2 py-6 md:py-10">
+          <div className="grid items-center gap-4 lg:grid-cols-[1.1fr_0.9fr] lg:gap-6">
+            <motion.div variants={itemVariants} className="max-w-2xl px-1 py-2 md:py-5">
               <h1 className="text-5xl font-bold leading-none tracking-tight text-white md:text-7xl">
                 {heroData.headline}
               </h1>
@@ -91,16 +92,17 @@ export function Hero() {
             </motion.div>
 
             <motion.div variants={itemVariants} className="flex justify-center lg:justify-end">
-              <div className="relative flex h-[480px] w-[420px] items-center justify-center overflow-hidden rounded-[3rem] bg-transparent md:h-[560px] md:w-[500px]">
-                <div className="absolute inset-0 rounded-[3rem] bg-[radial-gradient(circle_at_center,_rgba(64,211,255,0.18),_transparent_50%)]" />
-                <div className="absolute inset-0 bg-[linear-gradient(135deg,_rgba(0,0,0,0.18),_transparent_35%,_rgba(0,0,0,0.2))]" />
+              <div className="relative flex h-[300px] w-[250px] items-center justify-center overflow-hidden rounded-[2rem] border border-black/50 bg-[#0a0a0a]/80 md:h-[360px] md:w-[300px] lg:h-[420px] lg:w-[350px]">
+                <div className="absolute inset-0 rounded-[2rem] bg-[radial-gradient(circle_at_center,_rgba(0,0,0,0.3),_transparent_54%)]" />
+                <div className="absolute inset-0 bg-[linear-gradient(135deg,_rgba(0,0,0,0.2),_transparent_32%,_rgba(0,0,0,0.3))]" />
                 <img
-                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80"
+                  src={heroPortrait}
                   alt="Stephen Ilustre"
-                  className="relative h-full w-full object-cover grayscale-0"
+                  className="relative h-full w-full object-cover"
                   style={{
-                    filter: "saturate(0.9) contrast(1.05)",
-                    clipPath: "ellipse(48% 51% at 50% 50%)",
+                    filter: "brightness(0.9) contrast(1.12) saturate(0.9) sepia(0.12)",
+                    clipPath: "ellipse(49% 52% at 50% 52%)",
+                    boxShadow: "0 18px 40px rgba(0,0,0,0.35)",
                   }}
                 />
               </div>
