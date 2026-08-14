@@ -1,6 +1,22 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Share2, Globe, Mail } from "lucide-react";
+import { ArrowRight, Mail } from "lucide-react";
 import { heroData } from "../data/hero";
+
+function FacebookIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-[18px] w-[18px] fill-current">
+      <path d="M13.7 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.5 1.6-1.5H17V3.9c-.3 0-1.3-.1-2.4-.1-2.4 0-4.1 1.5-4.1 4.2V10H7.8v3h2.7v8h3.2Z" />
+    </svg>
+  );
+}
+
+function LinkedInIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-[18px] w-[18px] fill-current">
+      <path d="M6.5 8.5A1.8 1.8 0 1 0 6.5 5a1.8 1.8 0 0 0 0 3.5ZM5 19h3V10H5v9Zm5 0h3v-5c0-1.3.2-2.5 1.8-2.5 1.6 0 1.7 1.5 1.7 2.6V19h3v-5.5c0-2.7-.6-4.8-3.8-4.8-1.5 0-2.5.8-2.9 1.6V10h-3v9Z" />
+    </svg>
+  );
+}
 
 export function Hero() {
   const containerVariants = {
@@ -64,13 +80,13 @@ export function Hero() {
               </div>
 
               <div className="mt-12 flex items-center gap-4">
-                <a href="https://www.facebook.com" target="_blank" rel="noreferrer" className="flex h-12 w-12 items-center justify-center rounded-full border border-sky-500/60 bg-[#0b2237] text-sky-300 transition hover:border-sky-400 hover:text-white">
-                  <Share2 size={18} />
+                <a aria-label="Facebook" href="https://www.facebook.com" target="_blank" rel="noreferrer" className="flex h-12 w-12 items-center justify-center rounded-full border border-sky-500/60 bg-[#0b2237] text-sky-300 transition hover:border-sky-400 hover:text-white">
+                  <FacebookIcon />
                 </a>
-                <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" className="flex h-12 w-12 items-center justify-center rounded-full border border-sky-500/60 bg-[#0b2237] text-sky-300 transition hover:border-sky-400 hover:text-white">
-                  <Globe size={18} />
+                <a aria-label="LinkedIn" href="https://www.linkedin.com" target="_blank" rel="noreferrer" className="flex h-12 w-12 items-center justify-center rounded-full border border-sky-500/60 bg-[#0b2237] text-sky-300 transition hover:border-sky-400 hover:text-white">
+                  <LinkedInIcon />
                 </a>
-                <a href="mailto:stephenilustre12@gmail.com" className="flex h-12 w-12 items-center justify-center rounded-full border border-sky-500/60 bg-[#0b2237] text-sky-300 transition hover:border-sky-400 hover:text-white">
+                <a aria-label="Email Stephen" href="mailto:stephenilustre12@gmail.com" className="flex h-12 w-12 items-center justify-center rounded-full border border-sky-500/60 bg-[#0b2237] text-sky-300 transition hover:border-sky-400 hover:text-white">
                   <Mail size={18} />
                 </a>
               </div>
