@@ -80,10 +80,10 @@ export function Hero() {
               </div>
 
               <div className="mt-12 flex items-center gap-4">
-                <a aria-label="Facebook" href="https://www.facebook.com" target="_blank" rel="noreferrer" className="flex h-12 w-12 items-center justify-center rounded-full border border-sky-500/60 bg-[#0b2237] text-sky-300 transition hover:border-sky-400 hover:text-white">
+                <a aria-label="Facebook" href="https://www.facebook.com/share/1LKsR4fcdw/?mibextid=wwXIfr" target="_blank" rel="noreferrer" className="flex h-12 w-12 items-center justify-center rounded-full border border-sky-500/60 bg-[#0b2237] text-sky-300 transition hover:border-sky-400 hover:text-white">
                   <FacebookIcon />
                 </a>
-                <a aria-label="LinkedIn" href="https://www.linkedin.com" target="_blank" rel="noreferrer" className="flex h-12 w-12 items-center justify-center rounded-full border border-sky-500/60 bg-[#0b2237] text-sky-300 transition hover:border-sky-400 hover:text-white">
+                <a aria-label="LinkedIn" href="https://www.linkedin.com/in/stephen-ilustre-6649b8358?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" rel="noreferrer" className="flex h-12 w-12 items-center justify-center rounded-full border border-sky-500/60 bg-[#0b2237] text-sky-300 transition hover:border-sky-400 hover:text-white">
                   <LinkedInIcon />
                 </a>
                 <a aria-label="Email Stephen" href="mailto:stephenilustre12@gmail.com" className="flex h-12 w-12 items-center justify-center rounded-full border border-sky-500/60 bg-[#0b2237] text-sky-300 transition hover:border-sky-400 hover:text-white">
