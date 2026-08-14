@@ -65,7 +65,9 @@ export function Hero() {
 
               <div className="mt-10 flex flex-col gap-4 sm:flex-row">
                 <a
-                  href="mailto:stephenilustre12@gmail.com"
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=stephenilustre12@gmail.com"
+                  target="_blank"
+                  rel="noreferrer"
                   className="inline-flex items-center justify-center gap-2 rounded-xl bg-sky-500 px-8 py-4 text-lg font-semibold text-white shadow-[0_10px_30px_rgba(14,165,233,0.45)] transition hover:bg-sky-400"
                 >
                   {heroData.cta_primary}
@@ -86,7 +88,7 @@ export function Hero() {
                 <a aria-label="LinkedIn" href="https://www.linkedin.com/in/stephen-ilustre-6649b8358?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" rel="noreferrer" className="flex h-12 w-12 items-center justify-center rounded-full border border-sky-500/60 bg-[#0b2237] text-sky-300 transition hover:border-sky-400 hover:text-white">
                   <LinkedInIcon />
                 </a>
-                <a aria-label="Email Stephen" href="mailto:stephenilustre12@gmail.com" className="flex h-12 w-12 items-center justify-center rounded-full border border-sky-500/60 bg-[#0b2237] text-sky-300 transition hover:border-sky-400 hover:text-white">
+                <a aria-label="Email Stephen" href="https://mail.google.com/mail/?view=cm&fs=1&to=stephenilustre12@gmail.com" target="_blank" rel="noreferrer" className="flex h-12 w-12 items-center justify-center rounded-full border border-sky-500/60 bg-[#0b2237] text-sky-300 transition hover:border-sky-400 hover:text-white">
                   <Mail size={18} />
                 </a>
               </div>
