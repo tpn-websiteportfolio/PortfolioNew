@@ -2,6 +2,7 @@ import {
   Header,
   ScrollProgress,
   Hero,
+  About,
   Services,
   WorkflowProof,
   VAFitChecker,
@@ -17,6 +18,7 @@ function App() {
       <Header />
       <ScrollProgress />
       <Hero />
+      <About />
       <Services />
       <WorkflowProof />
       <VAFitChecker />

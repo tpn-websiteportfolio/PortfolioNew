@@ -23,7 +23,7 @@ export function WorkflowProof() {
   };
 
   return (
-    <section id="workflow-proof" className="py-20 md:py-32 bg-dark-800/30">
+    <section id="projects" className="py-20 md:py-32 bg-dark-800/30">
       <div className="container-custom">
         {/* Section Header */}
         <motion.div

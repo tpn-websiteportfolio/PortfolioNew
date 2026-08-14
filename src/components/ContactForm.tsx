@@ -36,7 +36,7 @@ export function ContactForm() {
   };
 
   return (
-    <section className="py-20 px-6 md:px-12 bg-gradient-to-b from-dark-800 via-dark-900 to-dark-800">
+    <section id="contact" className="py-20 px-6 md:px-12 bg-gradient-to-b from-dark-800 via-dark-900 to-dark-800">
       <div className="container-custom max-w-2xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

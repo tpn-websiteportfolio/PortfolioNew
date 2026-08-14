@@ -1,6 +1,7 @@
 export { Header } from "./Header";
 export { ScrollProgress } from "./ScrollProgress";
 export { Hero } from "./Hero";
+export { About } from "./About";
 export { Services } from "./Services";
 export { WorkflowProof } from "./WorkflowProof";
 export { VAFitChecker } from "./VAFitChecker";

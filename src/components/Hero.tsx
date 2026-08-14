@@ -34,20 +34,6 @@ export function Hero() {
           animate="visible"
           className="mx-auto h-full w-full px-3 py-0 md:px-6 lg:px-12"
         >
-          <motion.div
-            variants={itemVariants}
-            className="mb-12 flex items-center justify-between text-white md:mb-16"
-          >
-            <div className="text-3xl font-bold tracking-tight">{heroData.name}</div>
-            <div className="hidden items-center gap-8 md:flex">
-              <a href="#home" className="text-sm text-slate-300 transition hover:text-white">Home</a>
-              <a href="#about" className="text-sm text-slate-300 transition hover:text-white">About</a>
-              <a href="#services" className="text-sm text-slate-300 transition hover:text-white">Services</a>
-              <a href="#portfolio" className="text-sm text-slate-300 transition hover:text-white">Portfolio</a>
-              <a href="#contact" className="text-sm text-slate-300 transition hover:text-white">Contact</a>
-            </div>
-          </motion.div>
-
           <div className="grid h-full items-stretch gap-8 lg:grid-cols-[1fr_1.1fr] lg:gap-12">
             <motion.div variants={itemVariants} className="flex flex-col justify-center max-w-3xl px-0 py-8 md:py-12">
               <h1 className="text-6xl font-bold leading-tight tracking-tight text-white md:text-8xl lg:text-7xl">
