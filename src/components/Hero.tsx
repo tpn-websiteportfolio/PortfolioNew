@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Share2, Linkedin, Mail } from "lucide-react";
+import { ArrowRight, Share2, Globe, Mail } from "lucide-react";
 import { heroData } from "../data/hero";
 
 export function Hero() {
@@ -82,7 +82,7 @@ export function Hero() {
                   <Share2 size={18} />
                 </a>
                 <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" className="flex h-12 w-12 items-center justify-center rounded-full border border-sky-500/60 bg-[#0b2237] text-sky-300 transition hover:border-sky-400 hover:text-white">
-                  <Linkedin size={18} />
+                  <Globe size={18} />
                 </a>
                 <a href="mailto:stephenilustre90@gmail.com" className="flex h-12 w-12 items-center justify-center rounded-full border border-sky-500/60 bg-[#0b2237] text-sky-300 transition hover:border-sky-400 hover:text-white">
                   <Mail size={18} />
