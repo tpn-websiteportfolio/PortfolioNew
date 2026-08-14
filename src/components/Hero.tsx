@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Share2, Globe, Mail } from "lucide-react";
-import heroPortrait from "../assets/stephen.jpg";
 import { heroData } from "../data/hero";
 
 export function Hero() {
@@ -33,7 +32,7 @@ export function Hero() {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="mx-auto max-w-[1080px] rounded-[1.25rem] border border-black/60 bg-[#0a0a0a]/80 px-3 py-3 shadow-[0_24px_70px_rgba(0,0,0,0.42)] backdrop-blur-[1px] md:px-5 md:py-4"
+          className="mx-auto max-w-[1080px] rounded-[1.25rem] border border-black/25 bg-[#151515]/60 px-3 py-3 shadow-[0_24px_70px_rgba(0,0,0,0.42)] backdrop-blur-[1px] md:px-5 md:py-4"
         >
           <motion.div
             variants={itemVariants}
@@ -92,11 +91,11 @@ export function Hero() {
             </motion.div>
 
             <motion.div variants={itemVariants} className="flex justify-center lg:justify-end">
-              <div className="relative flex h-[300px] w-[250px] items-center justify-center overflow-hidden rounded-[2rem] border border-black/50 bg-[#0a0a0a]/80 md:h-[360px] md:w-[300px] lg:h-[420px] lg:w-[350px]">
-                <div className="absolute inset-0 rounded-[2rem] bg-[radial-gradient(circle_at_center,_rgba(0,0,0,0.3),_transparent_54%)]" />
-                <div className="absolute inset-0 bg-[linear-gradient(135deg,_rgba(0,0,0,0.2),_transparent_32%,_rgba(0,0,0,0.3))]" />
+              <div className="relative flex h-[300px] w-[250px] items-center justify-center overflow-hidden rounded-[2rem] border border-black/20 bg-[#151515]/60 md:h-[360px] md:w-[300px] lg:h-[420px] lg:w-[350px]">
+                <div className="absolute inset-0 rounded-[2rem] bg-[radial-gradient(circle_at_center,_rgba(0,0,0,0.1),_transparent_54%)]" />
+                <div className="absolute inset-0 bg-[linear-gradient(135deg,_rgba(0,0,0,0.1),_transparent_32%,_rgba(0,0,0,0.15))]" />
                 <img
-                  src={heroPortrait}
+                  src="/stephen.jpg"
                   alt="Stephen Ilustre"
                   className="relative h-full w-full object-cover"
                   style={{
