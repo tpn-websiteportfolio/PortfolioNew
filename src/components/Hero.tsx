@@ -92,13 +92,15 @@ export function Hero() {
 
             <motion.div variants={itemVariants} className="relative h-full overflow-hidden -mr-12 -mb-0">
               <img
-                src="/ggg.jpg"
+                src="/fff.png"
                 alt="Stephen Ilustre"
-                className="h-full w-full object-cover"
+                className="h-[600px] w-[500px] object-cover object-top rounded-none border-0 shadow-none"
                 style={{
-                  filter: "brightness(0.95) contrast(1.05)",
-                  boxShadow: "inset -80px 0 120px rgba(0, 0, 0, 0.3)",
-                  objectPosition: "center 35%",
+                  WebkitMaskImage:
+        "linear-gradient(to bottom, black 75%, transparent 100%)",
+      maskImage:
+        "linear-gradient(to bottom, black 75%, transparent 100%)",
+      filter: "brightness(0.95) contrast(1.05)",
                 }}
               />
               <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-[#0a0a0a]/20" />
