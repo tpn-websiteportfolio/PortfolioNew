@@ -24,19 +24,19 @@ export function Hero() {
   };
 
   return (
-    <section id="home" className="relative flex min-h-screen items-center overflow-hidden pt-32 pb-16">
+    <section id="home" className="relative flex min-h-screen items-center overflow-hidden pt-20 pb-0">
       <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,_#0a0a0a_0%,_#0d0d0d_30%,_#0a0a0a_100%)]" />
 
-      <div className="container-custom h-full">
+      <div className="container-custom h-full w-full">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="mx-auto max-w-[1080px] h-full rounded-[1.25rem] border border-dark-700 bg-dark-800/50 px-3 py-3 shadow-[0_24px_70px_rgba(0,0,0,0.42)] backdrop-blur-[1px] md:px-5 md:py-4"
+          className="mx-auto h-full w-full px-3 py-0 md:px-6 lg:px-12"
         >
           <motion.div
             variants={itemVariants}
-            className="mb-6 flex items-center justify-between text-white md:mb-8"
+            className="mb-12 flex items-center justify-between text-white md:mb-16"
           >
             <div className="text-3xl font-bold tracking-tight">{heroData.name}</div>
             <div className="hidden items-center gap-8 md:flex">
@@ -48,20 +48,20 @@ export function Hero() {
             </div>
           </motion.div>
 
-          <div className="grid items-stretch gap-4 lg:grid-cols-[1.1fr_0.9fr] lg:gap-6">
-            <motion.div variants={itemVariants} className="flex flex-col justify-center max-w-2xl px-1 py-2 md:py-5">
-              <h1 className="text-5xl font-bold leading-none tracking-tight text-white md:text-7xl">
+          <div className="grid h-full items-stretch gap-8 lg:grid-cols-[1fr_1.1fr] lg:gap-12">
+            <motion.div variants={itemVariants} className="flex flex-col justify-center max-w-3xl px-0 py-8 md:py-12">
+              <h1 className="text-6xl font-bold leading-tight tracking-tight text-white md:text-8xl lg:text-7xl">
                 {heroData.headline}
               </h1>
-              <p className="mt-6 text-xl font-medium text-sky-300 md:text-3xl">
+              <p className="mt-8 text-2xl font-medium text-sky-300 md:text-3xl lg:text-2xl">
                 {heroData.role}
               </p>
 
-              <p className="mt-6 max-w-xl text-base leading-relaxed text-slate-300 md:text-lg">
+              <p className="mt-8 max-w-2xl text-base leading-relaxed text-slate-300 md:text-lg">
                 {heroData.subheadline}
               </p>
 
-              <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+              <div className="mt-10 flex flex-col gap-4 sm:flex-row">
                 <a
                   href="mailto:stephenilustre90@gmail.com"
                   className="inline-flex items-center justify-center gap-2 rounded-xl bg-sky-500 px-8 py-4 text-lg font-semibold text-white shadow-[0_10px_30px_rgba(14,165,233,0.45)] transition hover:bg-sky-400"
@@ -77,7 +77,7 @@ export function Hero() {
                 </a>
               </div>
 
-              <div className="mt-10 flex items-center gap-4">
+              <div className="mt-12 flex items-center gap-4">
                 <a href="https://www.facebook.com" target="_blank" rel="noreferrer" className="flex h-12 w-12 items-center justify-center rounded-full border border-sky-500/60 bg-[#0b2237] text-sky-300 transition hover:border-sky-400 hover:text-white">
                   <Share2 size={18} />
                 </a>
@@ -90,12 +90,17 @@ export function Hero() {
               </div>
             </motion.div>
 
-            <motion.div variants={itemVariants} className="relative h-full overflow-hidden">
+            <motion.div variants={itemVariants} className="relative h-full overflow-hidden -mr-12 -mb-0">
               <img
                 src="/ggg.jpg"
                 alt="Stephen Ilustre"
                 className="h-full w-full object-cover"
+                style={{
+                  filter: "brightness(0.95) contrast(1.05)",
+                  boxShadow: "inset -80px 0 120px rgba(0, 0, 0, 0.3)",
+                }}
               />
+              <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-[#0a0a0a]/20" />
             </motion.div>
           </div>
         </motion.div>
