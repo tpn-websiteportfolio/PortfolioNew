@@ -41,7 +41,7 @@ export function ToolsGrid() {
   };
 
   return (
-    <section className="py-20 px-6 md:px-12 bg-gradient-to-b from-dark-900 via-dark-800 to-dark-900">
+    <section id="tools" className="py-20 px-6 md:px-12 bg-gradient-to-b from-dark-900 via-dark-800 to-dark-900">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -51,7 +51,7 @@ export function ToolsGrid() {
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">Tools I Master</h2>
           <p className="text-xl text-gray-300">
-            18+ industry-leading tools to streamline your operations
+            A focused set of tools I use to support organized, day-to-day work.
           </p>
         </motion.div>
 

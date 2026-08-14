@@ -1,193 +1,41 @@
 export interface Tool {
   id: string;
   name: string;
-  category: "automation" | "communication" | "project" | "data" | "content" | "ai";
+  category: "communication" | "project" | "data" | "content" | "ai";
   description: string;
   icon: string;
 }
 
 export const tools: Tool[] = [
-  // Automation
-  {
-    id: "zapier",
-    name: "Zapier",
-    category: "automation",
-    description: "Connect apps and automate repetitive tasks",
-    icon: "Zap",
-  },
-  {
-    id: "make",
-    name: "Make",
-    category: "automation",
-    description: "Powerful workflow automation platform",
-    icon: "Zap",
-  },
-  {
-    id: "ifttt",
-    name: "IFTTT",
-    category: "automation",
-    description: "Simple automation for smart home and apps",
-    icon: "Zap",
-  },
-
-  // Communication
-  {
-    id: "gmail",
-    name: "Gmail",
-    category: "communication",
-    description: "Email management with advanced filtering",
-    icon: "Mail",
-  },
-  {
-    id: "slack",
-    name: "Slack",
-    category: "communication",
-    description: "Team communication and notifications",
-    icon: "MessageSquare",
-  },
-  {
-    id: "calendly",
-    name: "Calendly",
-    category: "communication",
-    description: "Easy scheduling without back-and-forth",
-    icon: "Calendar",
-  },
-
-  // Project Management
-  {
-    id: "asana",
-    name: "Asana",
-    category: "project",
-    description: "Organize tasks and manage projects",
-    icon: "Clipboard",
-  },
-  {
-    id: "monday",
-    name: "Monday.com",
-    category: "project",
-    description: "Flexible work operating system",
-    icon: "Clipboard",
-  },
-  {
-    id: "notion",
-    name: "Notion",
-    category: "project",
-    description: "All-in-one workspace for docs and databases",
-    icon: "Database",
-  },
-
-  // Data & CRM
-  {
-    id: "airtable",
-    name: "Airtable",
-    category: "data",
-    description: "Flexible database with powerful automations",
-    icon: "Database",
-  },
-  {
-    id: "pipedrive",
-    name: "Pipedrive",
-    category: "data",
-    description: "Sales CRM built for entrepreneurs",
-    icon: "Users",
-  },
-  {
-    id: "hubspot",
-    name: "HubSpot",
-    category: "data",
-    description: "Complete CRM platform",
-    icon: "Users",
-  },
-
-  // Content
-  {
-    id: "buffer",
-    name: "Buffer",
-    category: "content",
-    description: "Schedule and manage social media content",
-    icon: "Share2",
-  },
-  {
-    id: "canva",
-    name: "Canva",
-    category: "content",
-    description: "Design professional graphics easily",
-    icon: "Palette",
-  },
-  {
-    id: "copy",
-    name: "Copysmith",
-    category: "content",
-    description: "AI-powered copywriting assistance",
-    icon: "FileText",
-  },
-
-  // AI Tools
-  {
-    id: "chatgpt",
-    name: "ChatGPT",
-    category: "ai",
-    description: "AI assistant for content and analysis",
-    icon: "Brain",
-  },
-  {
-    id: "perplexity",
-    name: "Perplexity AI",
-    category: "ai",
-    description: "AI research assistant with real-time info",
-    icon: "Brain",
-  },
-  {
-    id: "claude",
-    name: "Claude AI",
-    category: "ai",
-    description: "Advanced AI for complex reasoning",
-    icon: "Brain",
-  },
+  { id: "google-spreadsheet", name: "Google Spreadsheet", category: "data", description: "Create, organize, and review spreadsheet data.", icon: "Table2" },
+  { id: "microsoft-office", name: "Microsoft Office", category: "data", description: "Create documents, presentations, and spreadsheets.", icon: "BriefcaseBusiness" },
+  { id: "slack", name: "Slack", category: "communication", description: "Communicate and collaborate with teams in shared channels.", icon: "MessageSquare" },
+  { id: "notion", name: "Notion", category: "project", description: "Organize notes, documents, and team information in one workspace.", icon: "NotebookText" },
+  { id: "canva", name: "Canva", category: "content", description: "Create visual content using ready-made design tools.", icon: "Palette" },
+  { id: "gmail", name: "Gmail", category: "communication", description: "Send, receive, and organize email communication.", icon: "Mail" },
+  { id: "chatgpt", name: "ChatGPT", category: "ai", description: "Use AI assistance for drafting, research, and everyday tasks.", icon: "Bot" },
+  { id: "gemini", name: "Gemini", category: "ai", description: "Use AI assistance to explore ideas and work with information.", icon: "Sparkles" },
+  { id: "google-calendar", name: "Google Calendar", category: "communication", description: "Schedule events, manage availability, and plan meetings.", icon: "CalendarDays" },
+  { id: "zoom", name: "Zoom", category: "communication", description: "Host and join video meetings and online conversations.", icon: "Video" },
+  { id: "shopify", name: "Shopify", category: "content", description: "Manage products and content for an online store.", icon: "ShoppingBag" },
 ];
 
 export interface ToolCategory {
   id: string;
   name: string;
-  category: string;
+  category: Tool["category"];
   tools: Tool[];
 }
 
-export const toolCategories: ToolCategory[] = [
-  {
-    id: "automation",
-    name: "Automation",
-    category: "automation",
-    tools: tools.filter((t) => t.category === "automation"),
-  },
-  {
-    id: "communication",
-    name: "Communication",
-    category: "communication",
-    tools: tools.filter((t) => t.category === "communication"),
-  },
-  {
-    id: "project",
-    name: "Project Management",
-    category: "project",
-    tools: tools.filter((t) => t.category === "project"),
-  },
-  {
-    id: "data",
-    name: "Data & CRM",
-    category: "data",
-    tools: tools.filter((t) => t.category === "data"),
-  },
-  {
-    id: "content",
-    name: "Content",
-    category: "content",
-    tools: tools.filter((t) => t.category === "content"),
-  },
-  {
-    id: "ai",
-    name: "AI Tools",
-    category: "ai",
-    tools: tools.filter((t) => t.category === "ai"),
-  },
+const categories: Array<Pick<ToolCategory, "id" | "name" | "category">> = [
+  { id: "communication", name: "Communication", category: "communication" },
+  { id: "project", name: "Project Management", category: "project" },
+  { id: "data", name: "Data & Office", category: "data" },
+  { id: "content", name: "Content", category: "content" },
+  { id: "ai", name: "AI Tools", category: "ai" },
 ];
+
+export const toolCategories: ToolCategory[] = categories.map((category) => ({
+  ...category,
+  tools: tools.filter((tool) => tool.category === category.category),
+}));

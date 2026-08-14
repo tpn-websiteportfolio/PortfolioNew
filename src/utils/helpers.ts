@@ -95,6 +95,15 @@ export function mapToolIcon(iconName: string) {
     CheckCircle: Icons.CheckCircle,
     Send: Icons.Send,
     Palette: Icons.Palette,
+    Table2: Icons.Table2,
+    BriefcaseBusiness: Icons.BriefcaseBusiness,
+    MessageSquare: Icons.MessageSquare,
+    NotebookText: Icons.NotebookText,
+    Bot: Icons.Bot,
+    Sparkles: Icons.Sparkles,
+    CalendarDays: Icons.CalendarDays,
+    Video: Icons.Video,
+    ShoppingBag: Icons.ShoppingBag,
     ExternalLink: Icons.ExternalLink,
   };
   
